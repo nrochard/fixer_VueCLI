@@ -1,0 +1,7 @@
+{
+  "name": "fixer_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
