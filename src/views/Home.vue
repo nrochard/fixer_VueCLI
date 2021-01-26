@@ -1,40 +1,57 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
+  <ion-app>
+    <ion-header>
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Header</ion-title>
       </ion-toolbar>
     </ion-header>
-    
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-    </ion-content>
-  </ion-page>
+
+    <div class="ion-padding" id="container">
+      
+        <ion-row class="ion-align-items-center">
+          <ion-col >
+            <div>
+              <Form></Form>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="">
+          <ion-col>
+            <div>
+              2 of 4
+            </div>
+          </ion-col>
+        </ion-row>
+    </div>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>Footer</ion-title>
+      </ion-toolbar>
+  </ion-footer>
+
+  </ion-app>
 </template>
 
 <script>
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { defineComponent } from 'vue';
+import { IonApp, IonFooter, IonToolbar, IonHeader, IonTitle, IonRow, IonCol } from '@ionic/vue';
+import Form from '../components/Search'
+// import Weather from '../components/Result'
 
-export default defineComponent({
+export default {
   name: 'Home',
   components: {
-    IonContent,
+    // IonContent,
+    IonApp,
+    Form,
+    IonFooter,
+    IonToolbar,
     IonHeader,
-    IonPage,
     IonTitle,
-    IonToolbar
+    IonRow,
+    IonCol
   }
-});
+};
 </script>
 
 <style scoped>
