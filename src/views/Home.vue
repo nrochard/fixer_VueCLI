@@ -2,7 +2,7 @@
   <ion-app>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Header</ion-title>
+        <ion-title>Convertisseur</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -11,22 +11,20 @@
         <ion-row class="ion-align-items-center">
           <ion-col >
             <div>
-              <Form></Form>
+              <search></search>
             </div>
           </ion-col>
         </ion-row>
         <ion-row class="">
           <ion-col>
-            <div>
-              2 of 4
-            </div>
+            <result></result>
           </ion-col>
         </ion-row>
     </div>
 
     <ion-footer>
       <ion-toolbar>
-        <ion-title>Footer</ion-title>
+        <ion-title>Powered by Fixer.io</ion-title>
       </ion-toolbar>
   </ion-footer>
 
@@ -35,21 +33,22 @@
 
 <script>
 import { IonApp, IonFooter, IonToolbar, IonHeader, IonTitle, IonRow, IonCol } from '@ionic/vue';
-import Form from '../components/Search'
-// import Weather from '../components/Result'
+import Search from '../components/Search'
+import Result from '../components/Result'
 
 export default {
   name: 'Home',
   components: {
     // IonContent,
     IonApp,
-    Form,
+    Search,
     IonFooter,
     IonToolbar,
     IonHeader,
     IonTitle,
     IonRow,
-    IonCol
+    IonCol,
+    Result
   }
 };
 </script>
