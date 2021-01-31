@@ -54,10 +54,7 @@ export default {
       axios
         .get(`http://data.fixer.io/api/symbols?access_key=${process.env.VUE_APP_FIXER_KEY}`)
         .then((response) => {
-            
-            console.log(response.data);
             this.symbols = response.data.symbols;
-             console.log(this.symbols);
         })
         .catch((error) => {
           console.log(error);
@@ -73,7 +70,6 @@ export default {
           return toast.present();
     },
     getValue(){
-        console.log(this.value)
         if (isNaN(this.value) || !this.value) {
           this.value = "";
           this.displayError("Nombre non valide. ");
@@ -85,10 +81,6 @@ export default {
           this.displayError("Merci de choisir une devise. ");
           return;
         }
-
-
-
-        
 
         axios
         .get(`http://data.fixer.io/api/latest?access_key=${process.env.VUE_APP_FIXER_KEY}`)
@@ -102,12 +94,7 @@ export default {
         })
         .catch((error) => {
           console.log(error);
-        //   const toast = document.createElement('ion-toast');
-        //   toast.message = "Merci d'enter le nom d'une ville valide";
-        //   toast.duration = 4000;
-        //   toast.color = "danger";
-        //   document.body.appendChild(toast);
-        //   return toast.present();
+            this.displayError("Une erreur est survenue. ");
         })
 
     },
