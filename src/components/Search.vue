@@ -83,7 +83,7 @@ export default {
         }
 
         axios
-        .get(`https://data.fixer.io/api/latest?access_key=${process.env.VUE_APP_FIXER_KEY}`)
+        .get(`http://data.fixer.io/api/latest?access_key=${process.env.VUE_APP_FIXER_KEY}`)
         .then((response) => { 
             console.log(response.data.rates);
             let amountCurrency = response.data.rates[`${this.selectedSymbol}`]
